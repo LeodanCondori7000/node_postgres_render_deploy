@@ -1,0 +1,10 @@
+CREATE TABLE books (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  author VARCHAR(255) UNIQUE
+);
+
+INSERT INTO books (title, author) VALUES
+  ('The Great Gatsby', 'F. Scott Fitzgerald'),
+  ('To Kill a Mockingbird', 'Harper Lee'),
+  ('1984', 'George Orwell');

@@ -1,0 +1,8 @@
+### create
+POST http://localhost:5000/api/v1/books
+Content-Type: application/json
+
+{
+  "title": "I can trace you thouhgts",
+  "author": "Rockefeller Condori"
+}
