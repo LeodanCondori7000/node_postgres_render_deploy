@@ -4,7 +4,7 @@ const { Pool } = require("pg");
 // Configure the connection parameters for your local PostgreSQL database
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: true,
+  // ssl: true,
 });
 
 // const pool = new Pool({
