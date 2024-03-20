@@ -3,6 +3,7 @@ const router = express.Router();
 
 const bookController = require('../controllers/book.controller')
 
+router.get("/ping", bookController.showSomething);
 router.get("/", bookController.getAll)
 router.get("/:id", bookController.getById)
 router.post("/", bookController.create)

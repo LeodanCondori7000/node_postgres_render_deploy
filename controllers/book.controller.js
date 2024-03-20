@@ -66,6 +66,16 @@ const bookController = {
       res.json({ msg: error.msg });
     }
   },
+  showSomething: async (req, res) => {
+    try {
+      const result = await postgre.query("SELECT NOW()");
+      console.log("Query Result:", result.rows[0]);
+      return res.json(result.rows[0]);
+    } catch (error) {
+      console.error("Error executing SQL query:", error);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+  },
 };
 
 module.exports = bookController;
